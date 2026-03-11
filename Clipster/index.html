@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Clipster</title>
+  <link rel="stylesheet" href="./swiper-bundle.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 16px 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #333;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .description {
+      padding: 0 40px;
+    }
+
+    .swiper {
+      margin-top: 24px;
+      --swiper-pagination-color: #fff;
+    }
+
+    .swiper-slide {
+      padding: 0 16px;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="description">
+    <p style="font-size: 22px;color: #0089FF;"><strong>Clipster</strong> —— 剪贴板键盘</p>
+    <p style="margin-top: 8px;font-size: 14px;color: #80c4ff;">App Store 即将上架</p>
+  </div>
+  <div class="carousel">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./images/cover.png"></img></div>
+        <div class="swiper-slide"> <img src="./images/kjjp.png"></img></div>
+        <div class="swiper-slide"> <img src="./images/qjpp.png"></img></div>
+        <div class="swiper-slide"> <img src="./images/dbz.png"></img></div>
+        <div class="swiper-slide"> <img src="./images/nrgl.png"></img></div>
+        <div class="swiper-slide"> <img src="./images/jsq.png"></img></div>
+        <div class="swiper-slide"> <img src="./images/app.png"></img></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <script src="./swiper-bundle.min.js"></script>
+  <script>
+    new Swiper('.swiper', {
+      loop: true,
+      speed: 500,
+      autoplay: {
+        delay: 1800,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    })
+  </script>
+</body>
+
+</html>
