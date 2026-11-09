@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Clipster</title>
+  <link rel="stylesheet" href="./swiper-bundle.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      max-width: 430px;
+      height: 100vh;
+      margin: 0 auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #2a70b7;
+      background-image: linear-gradient(30deg, #cbe3fd, #f7fafd);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    header {
+      padding: 0 16px;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 24px;
+    }
+
+    .app-store-btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 6px 12px 8px;
+      color: #fff;
+      background-color: #1b4774;
+      border-radius: 8px;
+      text-decoration: none;
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .swiper {
+      margin-top: 6vh;
+      max-width: min(100%, calc(100vh - 200px) / 960 * 540);
+      border-radius: 18px;
+      border: 1px solid #cbe3fd;
+      --swiper-pagination-color: #fff;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <p class="title"><strong>Clipster</strong> —— 剪贴板键盘</p>
+    <a href="https://apps.apple.com/app/id6759727436" class="app-store-btn">
+      <span style="padding-right: 2px; font-size: 18px;"></span>
+      <span>App Store</span>
+    </a>
+  </header>
+  <main>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./images/cover.png"></img></div>
+        <div class="swiper-slide"><img src="./images/kjjp.png"></img></div>
+        <div class="swiper-slide"><img src="./images/qjpp.png"></img></div>
+        <div class="swiper-slide"><img src="./images/dbz.png"></img></div>
+        <div class="swiper-slide"><img src="./images/nrgl.png"></img></div>
+        <div class="swiper-slide"><img src="./images/jsq.png"></img></div>
+        <div class="swiper-slide"><img src="./images/app.png"></img></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </main>
+
+  <script src="./swiper-bundle.min.js"></script>
+  <script>
+    new Swiper('.swiper', {
+      loop: true,
+      speed: 500,
+      autoplay: {
+        delay: 1800,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    })
+  </script>
+</body>
+
+</html>
